@@ -5,17 +5,23 @@
 </head>
 <body>
 
-<div style="background:#222;color:white;padding:10px;">
-    <a href="index.html" style="color:white;margin-right:20px;">Store</a>
-    <a href="cart.html" style="color:white;margin-right:20px;">Cart</a>
+<nav>
+    <div>
+        <a href="index.html">Store</a>
+        <a href="cart.html">Cart</a>
+       <a id="adminLink" href="admin.html">Admin</a>
+    </div>
     <button onclick="logout()">Logout</button>
-</div>
+</nav>
+
 
 <h1>Game Details</h1>
 
 <div id="gameDetails"></div>
 
 <script src="game.js"></script>
+<link rel="stylesheet" href="style.css">
+
 
 </body>
 </html>

@@ -3,6 +3,14 @@ const token = localStorage.getItem("token");
 if (!token) {
     window.location.href = "login.html";
 }
+const isAdmin = localStorage.getItem("isAdmin");
+
+if (isAdmin !== "true") {
+    const adminLink = document.getElementById("adminLink");
+    if (adminLink) {
+        adminLink.style.display = "none";
+    }
+}
 
 fetch('http://localhost:5000/api/cart', {
     headers: {

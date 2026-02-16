@@ -8,9 +8,13 @@ function login() {
         })
     })
     .then(res => res.json())
-    .then(data => {
+.then(data => {
+    if (data.token) {
         localStorage.setItem("token", data.token);
-        alert("Login successful");
+        localStorage.setItem("isAdmin", data.isAdmin);
         window.location.href = "index.html";
-    });
+    } else {
+        alert(data.message || "Login failed");
+    }
+});
 }

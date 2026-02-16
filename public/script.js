@@ -1,4 +1,12 @@
 const token = localStorage.getItem("token");
+const isAdmin = localStorage.getItem("isAdmin");
+
+if (isAdmin !== "true") {
+    const adminLink = document.getElementById("adminLink");
+    if (adminLink) {
+        adminLink.style.display = "none";
+    }
+}
 
 if (!token) {
     window.location.href = "login.html";
@@ -10,11 +18,13 @@ function showGames(games) {
 
     games.forEach(game => {
         const div = document.createElement('div');
+        div.className = "game-card";
 
         div.innerHTML = `
             <h2>
                 <a href="game.html?id=${game._id}">
-                    ${game.title}
+                    <h2 class="game-title">${game.title}</h2>
+
                 </a>
             </h2>
             <p>${game.description}</p>

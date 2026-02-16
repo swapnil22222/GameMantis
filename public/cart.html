@@ -5,11 +5,15 @@
 </head>
 <body>
     
-    <div style="background:#222;color:white;padding:10px;">
-    <a href="index.html" style="color:white;margin-right:20px;">Store</a>
-    <a href="cart.html" style="color:white;margin-right:20px;">Cart</a>
-    <button onclick="logout()">Logout</button>
+ <nav>
+    <div>
+        <a href="index.html">Store</a>
+        <a href="cart.html">Cart</a>
+        <a id="adminLink" href="admin.html">Admin</a>
     </div>
+    <button onclick="logout()">Logout</button>
+</nav>
+
 
     <h1>Your Cart</h1>
 
@@ -18,5 +22,7 @@
     <button onclick="checkout()">Checkout</button>
 
     <script src="cart.js"></script>
+    <link rel="stylesheet" href="style.css">
+
 </body>
 </html>

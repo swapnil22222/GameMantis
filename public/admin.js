@@ -1,3 +1,10 @@
+const isAdmin = localStorage.getItem("isAdmin");
+
+if (isAdmin !== "true") {
+    alert("Access denied");
+    window.location.href = "index.html";
+}
+
 const token = localStorage.getItem("token");
 
 if (!token) {
