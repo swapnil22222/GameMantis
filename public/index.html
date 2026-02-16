@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Game Store</title>
+</head>
+<body>
+
+    <div style="background:#222;color:white;padding:10px;">
+    <a href="index.html" style="color:white;margin-right:20px;">Store</a>
+    <a href="cart.html" style="color:white;margin-right:20px;">Cart</a>
+    <button onclick="logout()">Logout</button>
+    </div>
+    
+    <input id="searchBox" placeholder="Search games..." onkeyup="searchGames()" />
+
+
+    <h1>Game Store</h1>
+
+    <div id="games"></div>
+    <div id="pagination"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

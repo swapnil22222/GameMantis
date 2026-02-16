@@ -2,19 +2,20 @@ const express = require('express');
 const cors = require('cors');
 const userRoutes = require('./routes/userRoutes');
 require('dotenv').config();
-
+const gameRoutes = require('./routes/gameRoutes');
 const connectDB = require('./config/db');
 connectDB();
 
-
-
+const cartRoutes = require('./routes/cartRoutes');
+const orderRoutes = require('./routes/orderRoutes');
 
 const app = express();
 app.use(cors());
 app.use(express.json());
-
-
-
+app.use('/api/games', gameRoutes);
+app.use('/api/orders', orderRoutes);
+app.use('/api/cart', cartRoutes);
+app.use(express.static('public'));
 const authRoutes = require('./routes/authRoutes');
 app.use('/api/auth', authRoutes);
 
